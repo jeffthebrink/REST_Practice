@@ -1,7 +1,6 @@
 package brink.practice.restpractice;
 
 import java.util.concurrent.atomic.AtomicLong;
-
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,6 +18,6 @@ public class GreetingController {
     @RequestMapping(path = "/greeting", method = RequestMethod.POST)
     public void postGreeting(@RequestBody String name) {
         Greeting greeting = new Greeting(counter.incrementAndGet(), name);
-        System.out.println( greeting.getContent());
+        System.out.println(greeting.getContent());
     }
 }
